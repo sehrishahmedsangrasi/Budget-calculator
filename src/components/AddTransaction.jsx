@@ -45,7 +45,7 @@ const AddTransaction = () => {
         <button
           onClick={() => setType('Income')}
           className={`flex-1 p-4 border rounded-lg ${
-            type === 'Income' ? 'border-customdrkgreen bg-customgreen' : 'border-gray-300'
+            type === 'Income' ? 'border-customdrkgreen bg-customgreen' : 'bg-customGrayish text-customTextGray border-gray-300'
           }`}
         >
           Income
@@ -54,7 +54,7 @@ const AddTransaction = () => {
         <button
           onClick={() => setType('Expense')}
           className={`flex-1 p-4 border rounded-lg ${
-            type === 'Expense' ? 'border-customRed bg-customDullRed' : 'border-gray-300'
+            type === 'Expense' ? 'border-customRed bg-customDullRed' : 'bg-customGrayish text-customTextGray border-gray-300'
           }`}
         >
           Expense
@@ -64,7 +64,9 @@ const AddTransaction = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
+          
           <label className="block mb-1" htmlFor="category">Category</label>
+
           <select
             id="category"
             name="category"
@@ -73,18 +75,23 @@ const AddTransaction = () => {
             onChange={(e) => setCategory(e.target.value)}
             disabled={!type} 
           >
+
             <option value="" disabled>Select Category</option>
             {type === 'Income' && incomeCategories.map((cat) => (
               <option key={cat} value={cat}>{cat}</option>
             ))}
+
             {type === 'Expense' && expenseCategories.map((cat) => (
               <option key={cat} value={cat}>{cat}</option>
             ))}
+
           </select>
         </div>
 
         <div className="mb-4">
+
           <label className="block mb-1" htmlFor="amount">Amount</label>
+
           <input
             id="amount"
             name="amount"
@@ -95,10 +102,13 @@ const AddTransaction = () => {
             placeholder="$$$"
             disabled={!type} 
           />
+
         </div>
 
         <div className="mb-4">
+
           <label className="block mb-1" htmlFor="description">Description</label>
+
           <textarea
             id="description"
             name="description"
@@ -108,6 +118,7 @@ const AddTransaction = () => {
             placeholder="Enter a description..."
             disabled={!type} 
           />
+          
         </div>
 
         <button className="w-full bg-customYellow text-white px-4 py-2 rounded-lg hover:bg-yellow-500 cursor-pointer hover:border-yellow-700 hover:border">

@@ -18,7 +18,9 @@ export default {
       customRed:'#B05A5A',
       customDullRed:'#FFEAEA',
       customGrassGreen:"#5AB064",
-      customLightGreen:"#ECFFEA"
+      customLightGreen:"#ECFFEA",
+      customGrayish:"#EBEBEB",
+      customFontGray: "#767676",
 
     },fontSize: {
       'custom-12px': '12px',

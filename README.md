@@ -1,5 +1,4 @@
 
-
 # Budget Calculator
 
 A simple budget management application that helps you track your income and expenses. You can add transactions (both income and expenses), view the transaction history, and delete specific transactions. The app also provides a visual summary of your finances using **Chart.js** and displays the total amount left after deducting your expenses from your income.
